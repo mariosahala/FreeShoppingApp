@@ -15,3 +15,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "FakeShoppingApp"
 include ':app'
+include ':core'
