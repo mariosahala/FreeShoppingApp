@@ -1,3 +1,64 @@
 <resources>
     <string name="app_name">FakeShoppingApp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="search_product">Search Product...</string>
+    <string name="cartimage">cartImage</string>
+    <string name="_0">0</string>
+    <string name="what_would_you_like_to_buy_today">What would you like to buy today?</string>
+    <string name="my_profile">My Profile</string>
+    <string name="stephen_muindi">Stephen Muindi</string>
+    <string name="stephenmuindi241_gmail_com">stephenmuindi241@gmail.com</string>
+    <string name="product_name">Product name</string>
+    <string name="product_title_description">Product title description</string>
+    <string name="_10_00">$10.00</string>
+    <string name="add_to_cart">Add to Cart</string>
+    <string name="how_would_you_like_to_receive_your_verification_code">How would you like to receive your verification code??</string>
+    <string name="confirm">CONFIRM</string>
+    <string name="your_cart_is_empty">Your Cart is empty!</string>
+    <string name="proceed_to_payment">PROCEED TO PAYMENT</string>
+    <string name="ksh_1340_00">Ksh 1340.00</string>
+    <string name="_1_item">1 item</string>
+    <string name="vat">VAT</string>
+    <string name="ksh_40_00">Ksh 40.00</string>
+    <string name="ksh_1380_00">Ksh 1380.00</string>
+    <string name="sub_total">Sub total</string>
+    <string name="start_shopping">START SHOPPING</string>
+    <string name="remove">REMOVE</string>
+    <string name="_1">1</string>
+    <string name="order_status">Order Status</string>
+    <string name="your_order_is_one_the_way">Your order is one the way !</string>
+    <string name="pick_up">Pick up</string>
+    <string name="your_order_is_ready_for_pickup">Your order is ready for pickup</string>
+    <string name="your_order_is_now_active">Your order is now active</string>
+    <string name="order_received">Order received</string>
+    <string name="order_placed">Order Placed</string>
+    <string name="_5658">#5658</string>
+    <string name="order_id">ORDER ID</string>
+    <string name="_30_minutes">30 Minutes</string>
+    <string name="estimated_delivery">ESTIMATED DELIVERY</string>
+    <string name="accept_order">Accept Order</string>
+    <string name="decline_order">Decline Order</string>
+    <string name="back">back</string>
+    <string name="step">step</string>
+    <string name="how_do_you_want_to_pay_your_goods">How do you want to pay your goods?</string>
+    <string name="mobile_money">Mobile Money</string>
+    <string name="checkout_address">Checkout Address</string>
+    <string name="delivery_address">Delivery Address</string>
+    <string name="nothing">nnnn</string>
+    <string name="navigate">navigate</string>
+    <string name="paystack">Paystack</string>
+    <string name="payment_method">Payment Method</string>
+    <string name="paystack_payment">Paystack Payment</string>
+    <string name="card_number">Card Number</string>
+    <string name="pay_4000kes">Pay 4000Kes</string>
+    <string name="paypal">Paypal</string>
+    <string name="pay_now">Pay Now</string>
+    <string name="enter_amount">Enter Amount</string>
+    <array name="shopping_process">
+        <item>Cart</item>
+        <item>Payment</item>
+        <item>Checkout</item>
+    </array>
 </resources>

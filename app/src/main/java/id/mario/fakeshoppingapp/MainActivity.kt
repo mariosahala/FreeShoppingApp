@@ -1,11 +1,15 @@
 package id.mario.fakeshoppingapp
 
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
+import id.mario.core.base.BaseActivity
+import id.mario.fakeshoppingapp.databinding.ActivityMainBinding
 
-class MainActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+class MainActivity : BaseActivity<ActivityMainBinding>() {
+
+    override fun setViewBinding(): ActivityMainBinding = ActivityMainBinding.inflate(layoutInflater)
+
+    override fun setUpVariable() {
+        binding.apply {
+
+        }
     }
 }
