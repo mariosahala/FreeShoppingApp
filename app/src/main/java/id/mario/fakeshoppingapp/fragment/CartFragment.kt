@@ -2,7 +2,6 @@ package id.mario.fakeshoppingapp.fragment
 
 import android.app.AlertDialog
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.viewModels
@@ -50,6 +49,7 @@ class CartFragment : BaseFragment<FragmentCartBinding>() {
                 tvEmptyItemCart.visible()
                 btnStartShopping.visible()
                 rvCartMarket.gone()
+                btnCheckout.gone()
                 btnCheckout.isEnabled = false
 
             } else {
