@@ -14,7 +14,7 @@
 
 
         <ImageView
-            android:id="@+id/productImageBox"
+            android:id="@+id/iv_product"
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:layout_marginStart="8dp"
@@ -26,7 +26,7 @@
             app:srcCompat="@drawable/ic_launcher_background" />
 
         <TextView
-            android:id="@+id/productTitle"
+            android:id="@+id/tv_title_product"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -38,28 +38,28 @@
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/productImageBox" />
+            app:layout_constraintTop_toBottomOf="@+id/iv_product" />
 
         <TextView
-            android:id="@+id/productPrice"
+            android:id="@+id/tv_price_product_item"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="$10.00"
             android:textColor="@color/yellow_red"
             android:textSize="20sp"
-            app:layout_constraintStart_toStartOf="@+id/productTitle"
-            app:layout_constraintTop_toBottomOf="@+id/productTitle" />
+            app:layout_constraintStart_toStartOf="@+id/tv_title_product"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title_product" />
 
         <TextView
-            android:id="@+id/productCategory"
+            android:id="@+id/tv_name_category"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="Item category"
             android:textSize="14sp"
-            app:layout_constraintStart_toStartOf="@+id/productPrice"
-            app:layout_constraintTop_toBottomOf="@+id/productPrice" />
+            app:layout_constraintStart_toStartOf="@+id/tv_price_product_item"
+            app:layout_constraintTop_toBottomOf="@+id/tv_price_product_item" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </com.google.android.material.card.MaterialCardView>

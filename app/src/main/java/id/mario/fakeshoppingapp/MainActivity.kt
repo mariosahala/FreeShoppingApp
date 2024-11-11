@@ -4,12 +4,13 @@ import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.setupWithNavController
+import dagger.hilt.android.AndroidEntryPoint
 import id.mario.core.base.BaseActivity
 import id.mario.fakeshoppingapp.databinding.ActivityMainBinding
 
+@AndroidEntryPoint
 class MainActivity : BaseActivity<ActivityMainBinding>() {
     private lateinit var navController: NavController
-
 
     override fun setViewBinding(): ActivityMainBinding = ActivityMainBinding.inflate(layoutInflater)
 

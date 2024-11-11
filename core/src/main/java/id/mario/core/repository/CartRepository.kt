@@ -1,11 +1,11 @@
 package id.mario.core.repository
 
 import androidx.lifecycle.LiveData
-import id.mario.core.local.ProductDataBase
+import id.mario.core.local.ProductDatabase
 import id.mario.core.model.CartEntity
 
 class CartRepository(
-    private val database: ProductDataBase
+    private val database: ProductDatabase
 ) {
 
     suspend fun deleteAllCartItems() {

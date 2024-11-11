@@ -12,7 +12,7 @@ import id.mario.core.model.ProductsItemsModel
     entities = [ProductsItemsModel::class, CartEntity::class]
 )
 @TypeConverters
-abstract class ProductDataBase : RoomDatabase() {
+abstract class ProductDatabase : RoomDatabase() {
 
     abstract fun productsDao(): ProductDao
 
