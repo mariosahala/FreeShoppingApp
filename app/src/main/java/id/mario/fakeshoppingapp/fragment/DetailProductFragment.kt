@@ -5,11 +5,13 @@ import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import dagger.hilt.android.AndroidEntryPoint
 import id.mario.core.base.BaseFragment
 import id.mario.core.util.loadImage
 import id.mario.fakeshoppingapp.databinding.FragmentDetailProductBinding
 import id.mario.fakeshoppingapp.viewmodel.CartViewModel
 
+@AndroidEntryPoint
 class DetailProductFragment : BaseFragment<FragmentDetailProductBinding>() {
     private val viewModel by viewModels<CartViewModel>()
     private val args: DetailProductFragmentArgs by navArgs()

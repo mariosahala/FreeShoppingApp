@@ -6,7 +6,7 @@
     app:startDestination="@id/homeFragment">
 
     <fragment
-        android:id="@+id/chartFragment"
+        android:id="@+id/cartFragment"
         android:name="id.mario.fakeshoppingapp.fragment.CartFragment"
         android:label="fragment_chart"
         tools:layout="@layout/fragment_cart" />

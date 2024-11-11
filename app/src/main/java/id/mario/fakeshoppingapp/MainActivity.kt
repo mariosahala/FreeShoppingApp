@@ -6,6 +6,8 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.setupWithNavController
 import dagger.hilt.android.AndroidEntryPoint
 import id.mario.core.base.BaseActivity
+import id.mario.core.util.gone
+import id.mario.core.util.visible
 import id.mario.fakeshoppingapp.databinding.ActivityMainBinding
 
 @AndroidEntryPoint
@@ -22,6 +24,25 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
 
             bnvContent.apply {
                 setupWithNavController(navController)
+            }
+            navController.addOnDestinationChangedListener { _, destination, _ ->
+                when (destination.id) {
+                    R.id.homeFragment -> {
+                        bnvContent.visible()
+                    }
+
+                    R.id.cartFragment -> {
+                        bnvContent.visible()
+                    }
+
+                    R.id.profileFragment -> {
+                        bnvContent.visible()
+                    }
+
+                    else -> {
+                        bnvContent.gone()
+                    }
+                }
             }
         }
     }

@@ -14,5 +14,8 @@ class ProfileFragment : BaseFragment<FragmentProfileBinding>() {
 
 
     override fun setUpVariable() {
+        binding.btnLogOut.setOnClickListener {
+            activity?.finishAffinity()
+        }
     }
 }

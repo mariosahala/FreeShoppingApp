@@ -17,12 +17,12 @@
             android:layout_height="match_parent"
             android:layout_marginBottom="48dp"
             android:orientation="vertical"
-            tools:itemCount="1"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toTopOf="@+id/rl_cart_sub_total"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            tools:itemCount="1"
             tools:listitem="@layout/item_cart_market" />
 
         <RelativeLayout
@@ -31,6 +31,7 @@
             android:layout_height="98dp"
             android:layout_margin="20dp"
             android:layout_marginBottom="50dp"
+            android:visibility="gone"
             app:layout_constraintBottom_toTopOf="@id/btn_checkout"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent">

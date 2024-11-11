@@ -1,14 +1,269 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragment.ProfileFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content">
 
-</FrameLayout>
+        <LinearLayout
+            android:id="@+id/myProfileActionBarLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/yellow_red"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imageViewBackArrowMyProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="@string/my_profile"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:textStyle="normal" />
+        </LinearLayout>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circleImageViewProfile"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/ic_person_profile"
+            app:civ_border_width="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/myProfileActionBarLinearLayout" />
+
+        <TextView
+            android:id="@+id/tvUsernameProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical"
+            android:text="@string/stephen_muindi"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/circleImageViewProfile" />
+
+        <TextView
+            android:id="@+id/tvEmailProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/stephenmuindi241_gmail_com"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/tvUsernameProfile"
+            app:layout_constraintStart_toStartOf="@+id/tvUsernameProfile"
+            app:layout_constraintTop_toBottomOf="@+id/tvUsernameProfile" />
+
+        <RelativeLayout
+            android:id="@+id/ll1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="20dp"
+            android:background="#FBE6C0"
+            android:clickable="true"
+            android:focusable="true"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvEmailProfile">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginStart="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="Edit Profile"
+                android:textColor="@color/black" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/ic_arrow_right" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ll2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:background="#FBE6C0"
+            android:clickable="true"
+            android:focusable="true"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ll1">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginStart="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="My Account"
+                android:textColor="@color/black" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/ic_arrow_right" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ll3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:background="#FBE6C0"
+            android:clickable="true"
+            android:focusable="true"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ll2">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginStart="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="Purchase History"
+                android:textColor="@color/black" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/ic_arrow_right" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ll4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:background="#FBE6C0"
+            android:clickable="true"
+            android:focusable="true"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ll3">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginStart="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="Payment Methods"
+                android:textColor="@color/black" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/ic_arrow_right" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ll5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:background="#FBE6C0"
+            android:clickable="true"
+            android:focusable="true"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ll4">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginStart="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="Help Center"
+                android:textColor="@color/black" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/ic_arrow_right" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btnLogOut"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="32dp"
+            android:text="Log out"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ll5" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

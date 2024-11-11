@@ -9,6 +9,7 @@ import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import dagger.hilt.android.AndroidEntryPoint
 import id.mario.core.base.BaseFragment
+import id.mario.core.util.gone
 import id.mario.core.util.visible
 import id.mario.fakeshoppingapp.adapters.CartAdapter
 import id.mario.fakeshoppingapp.databinding.FragmentCartBinding
@@ -20,8 +21,7 @@ class CartFragment : BaseFragment<FragmentCartBinding>() {
 
     private val cartViewModel by viewModels<CartViewModel>()
     override fun setViewBinding(
-        inflater: LayoutInflater,
-        container: ViewGroup?
+        inflater: LayoutInflater, container: ViewGroup?
     ): FragmentCartBinding = FragmentCartBinding.inflate(layoutInflater, container, false)
 
     override fun setUpVariable() {
@@ -46,12 +46,10 @@ class CartFragment : BaseFragment<FragmentCartBinding>() {
             if (cartAdapter.itemCount == 0) {
                 Toast.makeText(requireContext(), "Cart Empty", Toast.LENGTH_SHORT).show()
 
-                rvCartMarket.visibility = View.GONE
-                rvCartMarket.removeView(view)
-
                 ivCartImage.visible()
                 tvEmptyItemCart.visible()
                 btnStartShopping.visible()
+                rvCartMarket.gone()
                 btnCheckout.isEnabled = false
 
             } else {
@@ -63,16 +61,12 @@ class CartFragment : BaseFragment<FragmentCartBinding>() {
     }
 
     private fun showAlertDialog() {
-        AlertDialog.Builder(requireActivity())
-            .setTitle("ORDER")
-            .setMessage("Are you sure you want to order ?")
-            .setPositiveButton("Yes") { _, _ ->
-            }
-            .setNegativeButton("Not Now") { dialog, _ ->
+        AlertDialog.Builder(requireActivity()).setTitle("ORDER")
+            .setMessage("Are you sure you want to order ?").setPositiveButton("Yes") { _, _ ->
+            }.setNegativeButton("Not Now") { dialog, _ ->
                 dialog.dismiss()
             }
 
-            .create()
-            .show()
+            .create().show()
     }
 }

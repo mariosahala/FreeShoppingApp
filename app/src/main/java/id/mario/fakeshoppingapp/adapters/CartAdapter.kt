@@ -36,8 +36,8 @@ class CartAdapter : RecyclerView.Adapter<CartAdapter.MyViewHolder>() {
             binding.apply {
                 ivProductCart.loadImage(data.image)
                 tvProductName.text = data.title
-                tvAmountProduct.text = "$" + data.price.toString()
-                root.setOnClickListener {
+                tvPriceProduct.text= "$" + data.price.toString()
+                btnRemoveProductCart.setOnClickListener {
                     onClick.invoke(data)
                 }
             }
